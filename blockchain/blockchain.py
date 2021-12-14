@@ -102,6 +102,14 @@ def get_chain():
 # Running the app
 app.run(host = '0.0.0.0', port = 5000)
 
+# Is chain valid?
+@app.route('/is_chain_valid', methods=['GET'])
+def is_chain_valid():
+    
+    response = {'message': 'Chain is/not valid'
+                }
+    return jsonify(response), 200
+
 
 
 
